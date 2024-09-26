@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from accounts.views import EmployeeDetailsView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', EmployeeDetailsView.as_view(), name="employee_details_view")
 ]
